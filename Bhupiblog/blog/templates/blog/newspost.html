@@ -1,0 +1,214 @@
+{% extends 'blog/basic.html' %}
+
+{% block body %}
+{% load humanize %}
+{% load extras %}
+<style>
+    .img1 {
+        height: 350px;
+    }
+
+    .img2 {
+        height: 200px;
+    }
+
+    .font-normal {
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .centre {
+        min-height: 700px;
+    }
+
+
+    .content-desktop {
+        display: block;
+    }
+
+    .content-mobile {
+        display: none;
+    }
+
+    @media screen and (max-width: 1000px) {
+
+        .content-desktop {
+            display: none;
+        }
+
+        .content-mobile {
+            display: block;
+        }
+
+    }
+
+    a:visited {
+        color: black;
+        background-color: transparent;
+        text-decoration: none;
+    }
+
+    a:hover {
+        color: rgb(51, 153, 255);
+        background-color: transparent;
+        text-decoration: none;
+    }
+</style>
+<div class="container centre content-desktop">
+    <div class="row mt-4">
+        <div class="col-md-8 blog-main">
+            <div class="d-inline-block mb-2 text-primary"><b>{{post.subcategory}}</b> <span
+                    class="badge badge-secondary">{{post.pub_date}}</span></div>
+            <h5 class="pb-1 mb-1">
+                <strong>{{post.title}}</strong>
+            </h5>
+            <hr>
+            <div class="blog-post">
+                <div><img class="img1 content-desktop d-block-none w-100" src="/media/{{post.thumbnail}}"></div>
+                <div><img class="img2 content-mobile d-block-none w-100" src="/media/{{post.thumbnail}}"></div>
+                <p class="my-3">{{post.content|safe}}</p>
+            </div>
+
+
+
+
+
+
+
+
+
+
+            <!-- /.blog-post -->
+
+
+
+
+        </div><!-- /.blog-main -->
+
+        <aside class="col-md-4 blog-sidebar">
+            <div class="p-4 mb-3 bg-light rounded">
+                <h4 class="font-italic">About</h4>
+                <p class="mb-0"><em>Bhupiblog started out as a small project and is now fastest growing e-commerce
+                        stores of all times in india and abroad.</em></p>
+            </div>
+            <div class="container my-3">
+                <h4 class="badge badge-info badge-lm"><b style="font-size:18px">Related News:</b></h4>
+
+                <div class="row my-2">
+                    {% for item in relposts %}
+
+                    <div
+                        class="row no-gutters border rounded overflow-hidden flex-md-row mb-0 shadow-sm h-md-250 position-relative">
+                        <div class="col p-2 d-flex flex-column position-static" style="width:450px">
+                            <div class="d-inline-block mb-1 text-primary"><b>{{item.subcategory}}</b> <span
+                                    class="badge badge-secondary">{{item.pub_date}}</div>
+                            <a href="{{item.slug1}}"><b>{{item.title}}</b></a>
+                        </div>
+                        <div class="col-auto  d-lg-block">
+                            <a href="{{item.slug1}}"><img src="/media/{{item.thumbnail}}" class="bd-placeholder-img"
+                                    width="70" height="100%" aria-label="Placeholder: Thumbnail" /></a>
+                            <title>Placeholder</title>
+
+                        </div>
+                    </div>
+
+                    {% if forloop.counter|divisibleby:1 %}
+                </div>
+                <div class="row my-1">
+                    {% endif %}
+                    {% endfor %}
+                </div>
+
+
+
+            </div>
+
+
+
+
+
+            <div class="p-3">
+                <h4 class="font-normal">Share:</h4>
+                <div class="sharethis-inline-share-buttons"></div>
+            </div>
+        </aside><!-- /.blog-sidebar -->
+
+    </div>
+</div>
+
+<div class="container centre content-mobile">
+    <div class="row mt-4">
+        <div class="col-md-12 blog-main">
+            <div class="d-inline-block mb-2 text-primary"><b>{{post.subcategory}}</b> <span
+                    class="badge badge-secondary">{{post.pub_date}}</span></div>
+            <h5 class="pb-1 mb-1">
+                <strong>{{post.title}}</strong>
+            </h5>
+            <hr>
+            <div class="blog-post">
+                <div><img class="img1 content-desktop d-block-none w-100" src="/media/{{post.thumbnail}}"></div>
+                <div><img class="img2 content-mobile d-block-none w-100" src="/media/{{post.thumbnail}}"></div>
+                <p class="my-3">{{post.content|safe}}</p>
+            </div>
+
+
+
+
+
+
+
+
+
+
+            <!-- /.blog-post -->
+        </div>
+    </div>
+ <!-- /.blog-main -->
+    <div class="col-md-12">
+        
+        <div class="container my-3">
+            <h4 class="badge badge-info badge-lm"><b style="font-size:18px">Related News:</b></h4>
+
+            <div class="row my-2">
+                {% for item in relposts %}
+
+                <div
+                    class="row no-gutters border rounded overflow-hidden flex-md-row mb-0 shadow-sm h-md-250 position-relative">
+                    <div class="col p-2 d-flex flex-column position-static" style="width:450px">
+                        <div class="d-inline-block mb-1 text-primary"><b>{{item.subcategory}}</b> <span
+                                class="badge badge-secondary">{{item.pub_date}}</div>
+                        <a href="{{item.slug1}}"><b>{{item.title}}</b></a>
+                    </div>
+                    <div class="col-auto  d-lg-block">
+                        <a href="{{item.slug1}}"><img src="/media/{{item.thumbnail}}" class="bd-placeholder-img"
+                                width="70" height="100%" aria-label="Placeholder: Thumbnail" /></a>
+                        <title>Placeholder</title>
+
+                    </div>
+                </div>
+
+                {% if forloop.counter|divisibleby:1 %}
+            </div>
+            <div class="row my-1">
+                {% endif %}
+                {% endfor %}
+            </div>
+
+
+
+        </div>
+
+
+
+
+
+        <div class="p-3">
+            <h4 class="font-normal">Share:</h4>
+            <div class="sharethis-inline-share-buttons"></div>
+        </div>
+        </aside><!-- /.blog-sidebar -->
+
+    </div>
+
+</div>
+{% endblock %}

@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="f132605b-99b2-4a43-b1cb-f8501502171c" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ProjectId" id="1Zo7lztAxJoiv5fjybT12NwKqPW" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  </component>
+  <component name="RunManager" selected="Python.bhupi">
+    <configuration name="bhupi" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="bhupi" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/bhupi.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="easy_install" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="bhupi" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/venv/bin" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/venv/bin/easy_install" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.bhupi" />
+        <item itemvalue="Python.easy_install" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f132605b-99b2-4a43-b1cb-f8501502171c" name="Default Changelist" comment="" />
+      <created>1585493747059</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1585493747059</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="582" y="218" width="800" height="684" key="#Updates" timestamp="1585493908211">
+      <screen x="64" y="27" width="1856" height="1053" />
+    </state>
+    <state x="582" y="218" width="800" height="684" key="#Updates/64.27.1856.1053@64.27.1856.1053" timestamp="1585493908211" />
+    <state x="774" y="310" width="426" height="493" key="FileChooserDialogImpl" timestamp="1585495375318">
+      <screen x="64" y="27" width="1856" height="1053" />
+    </state>
+    <state x="774" y="310" width="426" height="493" key="FileChooserDialogImpl/64.27.1856.1053@64.27.1856.1053" timestamp="1585495375318" />
+    <state width="1377" height="319" key="GridCell.Tab.0.bottom" timestamp="1585494017185">
+      <screen x="64" y="27" width="1856" height="1053" />
+    </state>
+    <state width="1377" height="319" key="GridCell.Tab.0.bottom/64.27.1856.1053@64.27.1856.1053" timestamp="1585494017185" />
+    <state width="1377" height="319" key="GridCell.Tab.0.center" timestamp="1585494017184">
+      <screen x="64" y="27" width="1856" height="1053" />
+    </state>
+    <state width="1377" height="319" key="GridCell.Tab.0.center/64.27.1856.1053@64.27.1856.1053" timestamp="1585494017184" />
+    <state width="1377" height="319" key="GridCell.Tab.0.left" timestamp="1585494017183">
+      <screen x="64" y="27" width="1856" height="1053" />
+    </state>
+    <state width="1377" height="319" key="GridCell.Tab.0.left/64.27.1856.1053@64.27.1856.1053" timestamp="1585494017183" />
+    <state width="1377" height="319" key="GridCell.Tab.0.right" timestamp="1585494017184">
+      <screen x="64" y="27" width="1856" height="1053" />
+    </state>
+    <state width="1377" height="319" key="GridCell.Tab.0.right/64.27.1856.1053@64.27.1856.1053" timestamp="1585494017184" />
+    <state width="1377" height="319" key="GridCell.Tab.1.bottom" timestamp="1585494017186">
+      <screen x="64" y="27" width="1856" height="1053" />
+    </state>
+    <state width="1377" height="319" key="GridCell.Tab.1.bottom/64.27.1856.1053@64.27.1856.1053" timestamp="1585494017186" />
+    <state width="1377" height="319" key="GridCell.Tab.1.center" timestamp="1585494017185">
+      <screen x="64" y="27" width="1856" height="1053" />
+    </state>
+    <state width="1377" height="319" key="GridCell.Tab.1.center/64.27.1856.1053@64.27.1856.1053" timestamp="1585494017185" />
+    <state width="1377" height="319" key="GridCell.Tab.1.left" timestamp="1585494017185">
+      <screen x="64" y="27" width="1856" height="1053" />
+    </state>
+    <state width="1377" height="319" key="GridCell.Tab.1.left/64.27.1856.1053@64.27.1856.1053" timestamp="1585494017185" />
+    <state width="1377" height="319" key="GridCell.Tab.1.right" timestamp="1585494017186">
+      <screen x="64" y="27" width="1856" height="1053" />
+    </state>
+    <state width="1377" height="319" key="GridCell.Tab.1.right/64.27.1856.1053@64.27.1856.1053" timestamp="1585494017186" />
+    <state x="481" y="188" width="1022" height="737" key="SettingsEditor" timestamp="1585495242716">
+      <screen x="64" y="27" width="1856" height="1053" />
+    </state>
+    <state x="481" y="188" width="1022" height="737" key="SettingsEditor/64.27.1856.1053@64.27.1856.1053" timestamp="1585495242716" />
+    <state x="648" y="380" key="com.intellij.ide.util.TipDialog" timestamp="1585495013885">
+      <screen x="64" y="27" width="1856" height="1053" />
+    </state>
+    <state x="648" y="380" key="com.intellij.ide.util.TipDialog/64.27.1856.1053@64.27.1856.1053" timestamp="1585495013885" />
+    <state x="608" y="365" width="758" height="390" key="com.jetbrains.python.documentation.PythonDocumentationEntryEditor" timestamp="1585494890021">
+      <screen x="64" y="27" width="1856" height="1053" />
+    </state>
+    <state x="608" y="365" width="758" height="390" key="com.jetbrains.python.documentation.PythonDocumentationEntryEditor/64.27.1856.1053@64.27.1856.1053" timestamp="1585494890021" />
+  </component>
+</project>

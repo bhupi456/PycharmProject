@@ -1,0 +1,99 @@
+{% extends 'blog/basic.html' %}
+
+{% block body %}
+<style>
+    img {
+    height: 110px;
+    width: 90px;
+    }
+
+    .centre {
+     min-height: 650px;
+    }
+
+.content-desktop {display: block;}
+    .content-mobile {display: none;}
+
+    @media screen and (max-width: 1000px) {
+
+    .content-desktop {display: none;}
+    .content-mobile {display: block;}
+
+    }
+
+    a:visited {
+  color: black;
+  background-color: transparent;
+  text-decoration: none;
+}
+a:hover {
+  color: rgb(51, 153, 255);
+  background-color: transparent;
+  text-decoration: none;
+}
+
+
+</style>
+
+
+
+
+<div class="container centre content-desktop">
+    <div class="row my-2">
+{% for item in myposts %}
+
+        <div class="col-md-4">
+            <a href="/news/{{item.slug1}}"><div
+                class="row no-gutters border rounded overflow-hidden flex-md-row mb-2 shadow-sm h-md-250 position-relative" style="height:115px">
+                <div class="col  d-flex flex-column position-static">
+                    <span class="d-inline-block ml-1 text-primary"><b>{{item.category}}</b> <span class="badge badge-secondary">{{item.pub_date}}</span></span>
+                    <div style="height:100px"><h5 class="m-1 hindi"><b>{{item.title}}</b></h5></div>
+
+                </div>
+                <div class="col-auto  d-block">
+                    <img src="/media/{{item.thumbnail}}" class="bd-placeholder-img" width="200" height="250
+                    aria-label="Placeholder: Thumbnail"/>
+                    <title>Placeholder</title>
+
+                </div>
+            </div></a>
+        </div>
+
+ {% if forloop.counter|divisibleby:3 %}
+    </div>
+    <div class="row my-1">
+ {% endif %}
+ {% endfor %}
+</div>
+</div>
+
+<div class="container centre content-mobile">
+    <div class="row my-2">
+{% for item in myposts %}
+
+        <div class="col-md-12">
+            <a href="/news/{{item.slug1}}">
+            <div
+                class="row no-gutters border rounded overflow-hidden flex-md-row mb-2 shadow-sm h-md-250 position-relative" style="height:115px">
+                <div class="col  d-flex flex-column position-static">
+                    <span class="d-inline-block ml-1 text-primary"><b>{{item.category}}</b> <span class="badge badge-secondary">{{item.pub_date}}</span></span>
+                    <div style="height:100px"><h5 class="m-1 hindi"><b>{{item.title}}</b></h5></div>
+                </div>
+                <div class="col-auto  d-block">
+                    <img src="/media/{{item.thumbnail}}" class="bd-placeholder-img" width="200" height="250
+                    aria-label="Placeholder: Thumbnail"/>
+                    <title>Placeholder</title>
+                </div>
+            </div></a>
+        </div>
+
+ {% if forloop.counter|divisibleby:1 %}
+    </div>
+    <div class="row my-1">
+ {% endif %}
+ {% endfor %}
+</div>
+</div>
+
+{% endblock body %}
+

@@ -1,0 +1,134 @@
+{% extends 'blog/basic.html' %}
+{% block aboutactive %} active {% endblock aboutactive %}
+{% block body %}
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.column {
+  float: left;
+  width: 33.3%;
+  margin-bottom: 16px;
+  padding: 0 8px;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  margin: 8px;
+}
+
+.about-section {
+  padding: 50px;
+  text-align: center;
+  background-color: #474e5d;
+  color: white;
+}
+img {
+height: 270px;
+}
+
+.container {
+  padding: 0 16px;
+}
+#founder {
+margin: 0 auto;
+}
+
+.container::after, .row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.title {
+  color: grey;
+}
+
+
+
+
+@media screen and (max-width: 650px) {
+  .column {
+    width: 100%;
+    display: block;
+  }
+}
+</style>
+
+<div class="container my-2">
+<div class="about-section">
+  <h1>About Us </h1>
+  <p>Some text about who we are and what we do.</p>
+  <p>Resize the browser window to see that this page is responsive by the way.</p>
+</div>
+    <div class="container my-2">
+        <div class="card" id="founder" style="width:350px">
+      <img src="/media/media/images/bhupi.jpg" alt="bhupi" style="width:100%">
+      <div class="container">
+          <h4 style="font-style:italic"><b>Bhupendra Kumar</b></h4>
+        <p class="title" style="font-style:italic">Founder</p>
+        <p>Barmer, Rajasthan</p>
+        <p>National Institute of Technology, Agartala, Tripura</p>
+        <p>bhupenndrakumar6162@gmail.com</p>
+      </div>
+    </div>
+    </div>
+
+    <h3 style="text-align:center"><b>Our Team</b></h3>
+
+<div class="row">
+  <div class="column">
+    <div class="card">
+      <img src="/media/{{post.image2}}" alt="nikhil" style="width:100%">
+      <div class="container">
+        <h5 style="font-style:italic"><b>Nikhil Sharma</b></h5>
+        <p class="title" style="font-style:italic">CEO</p>
+        <p style="font-style:italic">Pilani, Rajasthan</p>
+        <p style="font-style:italic">National Institute of Technology, Agartala, Tripura</p>
+        <p style="font-style:italic">nikhil@gmail.com</p>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <img src="/media/{{post.image3}}" alt="kapil" style="width:100%">
+      <div class="container">
+        <h5 style="font-style:italic"><b>Kapil Chahar</b></h5>
+        <p class="title" style="font-style:italic">Chief Engineer</p>
+        <p style="font-style:italic">Jaipur, Rajasthan</p>
+        <p style="font-style:italic">National Institute of Technology, Agartala, Tripura</p>
+        <p style="font-style:italic">kapilchahar@gmail.com</p>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <img src="/media/{{post.image4}}" alt="kadwa" style="width:100%">
+      <div class="container">
+        <h5 style="font-style:italic"><b>Pushpendra Kadwa</b></h5>
+        <p class="title" style="font-style:italic">Designer</p>
+        <p style="font-style:italic">jaipur, Rajasthan</p>
+        <p style="font-style:italic">National Institute of Technology, Agartala, Tripura</p>
+        <p style="font-style:italic">pushpendrakadwa@gmail.com</p>
+
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+{% endblock %}

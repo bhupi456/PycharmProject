@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="c5b0a2f1-28da-4696-b386-3eb8c3e000e5" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1Zr6KlYoGucCFCtjIkF6O49Dbkg" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="PyConsoleOptionsProvider">
+    <option name="myPythonConsoleState">
+      <console-settings>
+        <option name="useSoftWraps" value="true" />
+      </console-settings>
+    </option>
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/django" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python.urls (1)">
+    <configuration default="true" type="PythonConfigurationType" factoryName="Python">
+      <module name="bhupi456" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="pydev_import_hook" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="bhupi456" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$APPLICATION_HOME_DIR$/plugins/python-ce/helpers/pydev/_pydev_bundle" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$APPLICATION_HOME_DIR$/plugins/python-ce/helpers/pydev/_pydev_bundle/pydev_import_hook.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="urls (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="bhupi456" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/RAM/RAM" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/RAM/RAM/urls.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="urls" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+      <module name="bhupi456" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Djangobhupi/Bhupi/Bhupi" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Djangobhupi/Bhupi/Bhupi/urls.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="views" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+      <module name="bhupi456" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Djangobhupi/Bhupi/Bhupi" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Djangobhupi/Bhupi/Bhupi/views.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Unittests">
+      <module name="bhupi456" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_pattern" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.urls (1)" />
+        <item itemvalue="Python.pydev_import_hook" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="c5b0a2f1-28da-4696-b386-3eb8c3e000e5" name="Default Changelist" comment="" />
+      <created>1585584803779</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1585584803779</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="449" y="210" width="1086" height="719" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1588848551856">
+      <screen x="64" y="27" width="1856" height="1053" />
+    </state>
+    <state x="449" y="210" width="1086" height="719" key="#com.intellij.execution.impl.EditConfigurationsDialog/64.27.1856.1053@64.27.1856.1053" timestamp="1588848551856" />
+    <state width="1375" height="257" key="GridCell.Tab.0.bottom" timestamp="1588905210822">
+      <screen x="64" y="27" width="1856" height="1053" />
+    </state>
+    <state width="1375" height="257" key="GridCell.Tab.0.bottom/64.27.1856.1053@64.27.1856.1053" timestamp="1588905210822" />
+    <state width="1375" height="257" key="GridCell.Tab.0.center" timestamp="1588905210822">
+      <screen x="64" y="27" width="1856" height="1053" />
+    </state>
+    <state width="1375" height="257" key="GridCell.Tab.0.center/64.27.1856.1053@64.27.1856.1053" timestamp="1588905210822" />
+    <state width="1375" height="257" key="GridCell.Tab.0.left" timestamp="1588905210821">
+      <screen x="64" y="27" width="1856" height="1053" />
+    </state>
+    <state width="1375" height="257" key="GridCell.Tab.0.left/64.27.1856.1053@64.27.1856.1053" timestamp="1588905210821" />
+    <state width="1375" height="257" key="GridCell.Tab.0.right" timestamp="1588905210822">
+      <screen x="64" y="27" width="1856" height="1053" />
+    </state>
+    <state width="1375" height="257" key="GridCell.Tab.0.right/64.27.1856.1053@64.27.1856.1053" timestamp="1588905210822" />
+    <state width="1375" height="318" key="GridCell.Tab.1.bottom" timestamp="1588859160246">
+      <screen x="64" y="27" width="1856" height="1053" />
+    </state>
+    <state width="1375" height="318" key="GridCell.Tab.1.bottom/64.27.1856.1053@64.27.1856.1053" timestamp="1588859160246" />
+    <state width="1375" height="318" key="GridCell.Tab.1.center" timestamp="1588859160245">
+      <screen x="64" y="27" width="1856" height="1053" />
+    </state>
+    <state width="1375" height="318" key="GridCell.Tab.1.center/64.27.1856.1053@64.27.1856.1053" timestamp="1588859160245" />
+    <state width="1375" height="318" key="GridCell.Tab.1.left" timestamp="1588859160245">
+      <screen x="64" y="27" width="1856" height="1053" />
+    </state>
+    <state width="1375" height="318" key="GridCell.Tab.1.left/64.27.1856.1053@64.27.1856.1053" timestamp="1588859160245" />
+    <state width="1375" height="318" key="GridCell.Tab.1.right" timestamp="1588859160246">
+      <screen x="64" y="27" width="1856" height="1053" />
+    </state>
+    <state width="1375" height="318" key="GridCell.Tab.1.right/64.27.1856.1053@64.27.1856.1053" timestamp="1588859160246" />
+    <state x="387" y="215" width="1024" height="737" key="SettingsEditor" timestamp="1588905648368">
+      <screen x="64" y="27" width="1856" height="1053" />
+    </state>
+    <state x="387" y="215" width="1024" height="737" key="SettingsEditor/64.27.1856.1053@64.27.1856.1053" timestamp="1588905648368" />
+    <state x="562" y="299" key="search.everywhere.popup" timestamp="1588859434770">
+      <screen x="64" y="27" width="1856" height="1053" />
+    </state>
+    <state x="562" y="299" key="search.everywhere.popup/64.27.1856.1053@64.27.1856.1053" timestamp="1588859434770" />
+    <state x="716" y="444" width="542" height="225" key="vcs.readOnlyHandler.ReadOnlyStatusDialog" timestamp="1588864566545">
+      <screen x="64" y="27" width="1856" height="1053" />
+    </state>
+    <state x="716" y="444" width="542" height="225" key="vcs.readOnlyHandler.ReadOnlyStatusDialog/64.27.1856.1053@64.27.1856.1053" timestamp="1588864566545" />
+  </component>
+</project>

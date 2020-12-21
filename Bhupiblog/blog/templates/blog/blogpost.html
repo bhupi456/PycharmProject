@@ -1,0 +1,390 @@
+{% extends 'blog/basic.html' %}
+
+{% block body %}
+{% load humanize %}
+{% load extras %}
+<style>
+    .img1 {
+        height: 350px;
+    }
+
+    .img2 {
+        height: 200px;
+    }
+
+    #userimg {
+        border-radius: 50%;
+        height: 40px;
+        width: 50px;
+    }
+
+    .font-normal {
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .centre {
+        min-height: 700px;
+    }
+
+
+    .content-desktop {
+        display: block;
+    }
+
+    .content-mobile {
+        display: none;
+    }
+
+    @media screen and (max-width: 1000px) {
+
+        .content-desktop {
+            display: none;
+        }
+
+        .content-mobile {
+            display: block;
+        }
+
+    }
+</style>
+<div class="container centre content-desktop">
+    <div class="row mt-3">
+        <div class="col-md-8 blog-main">
+            <strong class="d-inline-block mb-2 text-primary">Category:-{{post.category}}</strong>
+            <h3 class="pb-1 mb-1 font-italic">
+                <strong>{{post.title}}</strong>
+            </h3>
+            <p class="blog-post-meta">{{post.pub_date}}, by: <a href="/about">{{post.writer}}</a></p>
+            <hr>
+            <div class="blog-post">
+
+                <div><img class="img1 content-desktop d-block-none w-100" src="/media/{{post.thumbnail}}"></div>
+                <div><img class="img2 content-mobile d-block-none w-100" src="/media/{{post.thumbnail}}"></div>
+                <p class="font-italic mt-2">{{post.content1|safe}}</p>
+
+            </div>
+
+
+            <div class="container">
+                <h5 class="my-2" style="color:blue">Comments({{comments.count}})</h5>
+                <div class="my-2">
+                    {% if user.is_authenticated %}
+                    <form action="/blog/postComment" method="post">
+                        {% csrf_token %}
+                        <div class="form-group">
+                            <label for="postcomment">Post Comment</label>
+                            <input type="text" class="form-control bg-dark text-light" name="comment"
+                                placeholder="Enter Comment Here" required>
+                        </div>
+                        <input type="hidden" name="postID" value="{{post.post_id}}">
+                        <input type="hidden" name="parentSno" value="">
+                        <button type="submit" class="btn btn-primary">Post Your Comment</button>
+                    </form>
+                    {% else %}
+                    <p>Please login to post comments</p>
+                    {% endif %}
+                </div>
+
+                {% for comment in comments %}
+
+                <div class="row my-3">
+                    <div class="container">
+                    <div class="col-md-3"><img class="rounded  d-block-flex w-200 p-0 " id="userimg"
+                            src="/static/img/ava.png"></div>
+                    <div class="col-md-9 my-0"><b>{{comment.user.username}} </b> <span
+                            class="badge badge-secondary">{{comment.pub_time | naturaltime}}</span>
+                        <div>{{comment.comment}}</div></div>
+                        <div class="reply mx-0">
+                            {% if user.is_authenticated %}
+                            <button class="btn btn-sm btn-secondary" type="button" data-toggle="collapse"
+                                data-target="#replyBox{{comment.sno}}" aria-expanded="false"
+                                aria-controls="replyBox{{comment.sno}}">
+                                Reply
+                            </button>
+                            <button class="btn btn-sm btn-secondary" type="button" data-toggle="collapse"
+                                data-target="#repliesBox{{comment.sno}}" aria-expanded="false"
+                                aria-controls="repliesBox{{comment.sno}}">
+                                view replies
+                            </button>
+                            <div class="collapse" id="replyBox{{comment.sno}}">
+                                <div class="card card-body my-2">
+                                    <form action="/blog/postComment" method="post">
+                                        {% csrf_token %}
+                                        <div class="form-group">
+                                            <label for="postcomment">Post Reply</label>
+                                            <input type="text" class="form-control bg-dark text-light" name="comment"
+                                                placeholder="Enter Comment Here" required>
+                                            <input type="hidden" name="parentSno" value="{{comment.sno}}">
+                                        </div>
+                                        <input type="hidden" name="postID" value="{{post.post_id}}">
+                                        <button type="submit" class="btn btn-primary">Submit</button>
+                                    </form>
+                                </div>
+                            </div>
+                            {% else %}
+                            <button class="btn btn-sm btn-primary" type="button" data-toggle="collapse"
+                                data-target="#replyBox{{comment.sno}}" aria-expanded="false"
+                                aria-controls="replyBox{{comment.sno}}" disabled>
+                                login to Reply
+                            </button>
+                            {% endif %}
+                            <div class="collapse" id="repliesBox{{comment.sno}}">
+                                <div class="card card-body my-2">
+                                    <div class="replies  ">
+                                        {% for reply in repDict|get_val:comment.sno %}
+                                        <div class="row my-2">
+                                            <div class="col-md-1">
+                                                <img class="rounded  d-block m-1" id="userimg"
+                                                    src="/static/img/ava.png">
+                                            </div>
+                                            <div class="col-md-11 my-0"> <b> {{reply.user.username }}</b> <span
+                                                    class="badge badge-secondary">{{reply.pub_time | naturaltime}}</span>
+                                                <div> {{reply.comment}}</div>
+                                            </div>
+                                        </div>
+                                        {% endfor %}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+        </div><!-- /.blog-main -->
+
+
+        <aside class="col-md-4 blog-sidebar">
+            <div class="p-4 mb-3 bg-light rounded content-desktop">
+                <h4 class="font-italic">About</h4>
+                <p class="mb-0"><em>Bhupiblog started out as a small project and is now fastest growing e-commerce
+                        stores of all times in india and abroad.</em></p>
+            </div>
+
+            <div class="container my-3">
+                <h4 class="badge badge-info badge-lm"><b style="font-size:18px">Related Blogs:</b></h4>
+
+                <div class="row my-2">
+                    {% for item in relposts %}
+
+                    <div
+                        class="row no-gutters border rounded overflow-hidden flex-md-row mb-0 shadow-sm h-md-250 position-relative">
+                        <div class="col p-2 d-flex flex-column position-static" style="width:450px">
+                            <div class="d-inline-block mb-1 text-primary"><b>{{item.subcategory}}</b> <span
+                                    class="badge badge-secondary">{{item.pub_date}}</div>
+                            <a href="{{item.slug}}"><b>{{item.title}}</b></a>
+                        </div>
+                        <div class="col-auto  d-lg-block">
+                            <a href="{{item.slug}}"><img src="/media/{{item.thumbnail}}" class="bd-placeholder-img"
+                                    width="70" height="100%" aria-label="Placeholder: Thumbnail" /></a>
+                            <title>Placeholder</title>
+
+                        </div>
+                    </div>
+
+                    {% if forloop.counter|divisibleby:1 %}
+                </div>
+                <div class="row my-1">
+                    {% endif %}
+                    {% endfor %}
+                </div>
+            </div>
+
+
+
+
+
+            <div class="p-3">
+                <h4 class="font-normal">Share:</h4>
+                <div class="sharethis-inline-share-buttons"></div>
+            </div>
+        </aside><!-- /.blog-sidebar -->
+
+    </div>
+</div>
+
+
+
+
+<div class="container centre content-mobile">
+    <div class="row mt-3">
+        <div class="col-md-12 blog-main">
+            <strong class="d-inline-block mb-2 text-primary">Category:-{{post.category}}</strong>
+            <h3 class="pb-1 mb-1 font-italic">
+                <strong>{{post.title}}</strong>
+            </h3>
+            <p class="blog-post-meta">{{post.pub_date}}, by: <a href="/about">{{post.writer}}</a></p>
+            <hr>
+            <div class="blog-post">
+
+                <div><img class="img1 content-desktop d-block-none w-100" src="/media/{{post.thumbnail}}"></div>
+                <div><img class="img2 content-mobile d-block-none w-100" src="/media/{{post.thumbnail}}"></div>
+                <p class="font-italic mt-2">{{post.content1|safe}}</p>
+
+            </div>
+
+
+            <div class="container">
+                <h5 class="my-2" style="color:blue">Comments({{comments.count}})</h5>
+                <div class="my-2">
+                    {% if user.is_authenticated %}
+                    <form action="/blog/postComment" method="post">
+                        {% csrf_token %}
+                        <div class="form-group">
+                            <label for="postcomment">Post Comment</label>
+                            <input type="text" class="form-control bg-dark text-light" name="comment"
+                                placeholder="Enter Comment Here" required>
+                        </div>
+                        <input type="hidden" name="postID" value="{{post.post_id}}">
+                        <input type="hidden" name="parentSno" value="">
+                        <button type="submit" class="btn btn-primary">Post Your Comment</button>
+                    </form>
+                    {% else %}
+                    <p>Please login to post comments</p>
+                    {% endif %}
+                </div>
+
+                {% for comment in comments %}
+
+                <div class="row my-3">
+                    <div class="container">
+                    <div class="col-md-3"><img class="rounded  d-block-flex w-200 p-0 " id="userimg"
+                            src="/static/img/ava.png"></div>
+                    <div class="col-md-9 my-0"><b>{{comment.user.username}} </b> <span
+                            class="badge badge-secondary">{{comment.pub_time | naturaltime}}</span>
+                        <div>{{comment.comment}}</div></div>
+                        <div class="reply mx-0">
+                            {% if user.is_authenticated %}
+                            <button class="btn btn-sm btn-secondary" type="button" data-toggle="collapse"
+                                data-target="#replyBox{{comment.sno}}" aria-expanded="false"
+                                aria-controls="replyBox{{comment.sno}}">
+                                Reply
+                            </button>
+                            <button class="btn btn-sm btn-secondary" type="button" data-toggle="collapse"
+                                data-target="#repliesBox{{comment.sno}}" aria-expanded="false"
+                                aria-controls="repliesBox{{comment.sno}}">
+                                view replies
+                            </button>
+                            <div class="collapse" id="replyBox{{comment.sno}}">
+                                <div class="card card-body my-2">
+                                    <form action="/blog/postComment" method="post">
+                                        {% csrf_token %}
+                                        <div class="form-group">
+                                            <label for="postcomment">Post Reply</label>
+                                            <input type="text" class="form-control bg-dark text-light" name="comment"
+                                                placeholder="Enter Comment Here" required>
+                                            <input type="hidden" name="parentSno" value="{{comment.sno}}">
+                                        </div>
+                                        <input type="hidden" name="postID" value="{{post.post_id}}">
+                                        <button type="submit" class="btn btn-primary">Submit</button>
+                                    </form>
+                                </div>
+                            </div>
+                            {% else %}
+                            <button class="btn btn-sm btn-primary" type="button" data-toggle="collapse"
+                                data-target="#replyBox{{comment.sno}}" aria-expanded="false"
+                                aria-controls="replyBox{{comment.sno}}" disabled>
+                                login to Reply
+                            </button>
+                            {% endif %}
+                            <div class="collapse" id="repliesBox{{comment.sno}}">
+                                <div class="card card-body my-2">
+                                    <div class="replies  ">
+                                        {% for reply in repDict|get_val:comment.sno %}
+                                        <div class="row my-2">
+                                            <div class="col-md-1">
+                                                <img class="rounded  d-block m-1" id="userimg"
+                                                    src="/static/img/ava.png">
+                                            </div>
+                                            <div class="col-md-11 my-0"> <b> {{reply.user.username }}</b> <span
+                                                    class="badge badge-secondary">{{reply.pub_time | naturaltime}}</span>
+                                                <div> {{reply.comment}}</div>
+                                            </div>
+                                        </div>
+                                        {% endfor %}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+
+
+
+
+
+
+            <hr style="border: 1px solid black">
+
+            <!-- /.blog-post -->
+
+
+
+
+        </div><!-- /.blog-main -->
+
+
+        <div class="col-md-12">
+            <div class="p-4 mb-3 bg-light rounded content-desktop">
+                <h4 class="font-italic">About</h4>
+                <p class="mb-0"><em>Bhupiblog started out as a small project and is now fastest growing e-commerce
+                        stores of all times in india and abroad.</em></p>
+            </div>
+
+            <div class="container my-3">
+                <h4 class="badge badge-info badge-lm"><b style="font-size:18px">Related Blogs:</b></h4>
+
+                <div class="row my-2">
+                    {% for item in relposts %}
+
+                    <div
+                        class="row no-gutters border rounded overflow-hidden flex-md-row mb-0 shadow-sm h-md-250 position-relative">
+                        <div class="col p-2 d-flex flex-column position-static" style="width:450px">
+                            <div class="d-inline-block mb-1 text-primary"><b>{{item.subcategory}}</b> <span
+                                    class="badge badge-secondary">{{item.pub_date}}</div>
+                            <a href="{{item.slug}}"><b>{{item.title}}</b></a>
+                        </div>
+                        <div class="col-auto  d-lg-block">
+                            <a href="{{item.slug}}"><img src="/media/{{item.thumbnail}}" class="bd-placeholder-img"
+                                    width="70" height="100%" aria-label="Placeholder: Thumbnail" /></a>
+                            <title>Placeholder</title>
+
+                        </div>
+                    </div>
+
+                    {% if forloop.counter|divisibleby:1 %}
+                </div>
+                <div class="row my-1">
+                    {% endif %}
+                    {% endfor %}
+                </div>
+            </div>
+
+
+
+
+
+            <div class="p-3">
+                <h4 class="font-normal">Share:</h4>
+                <div class="sharethis-inline-share-buttons"></div>
+            </div>
+        </div><!-- /.blog-sidebar -->
+
+    </div>
+</div>
+
+{% endblock %}

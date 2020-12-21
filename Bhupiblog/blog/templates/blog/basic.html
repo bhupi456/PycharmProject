@@ -1,0 +1,260 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
+
+    <!-- Bootstrap CSS -->
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Rock+Salt&family=Shrikhand&family=Sriracha&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Trade+Winds&display=swap" rel="stylesheet">
+      <link href="blog/darpan.css" rel="stylesheet">
+      <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Ceviche+One&display=swap" rel="stylesheet">
+    <title>{% block title%} {% endblock %}</title>
+     <style>
+     .word{
+     font-family: 'Rock Salt', cursive;
+     font-family: 'Shrikhand', cursive;
+     font-family: 'Sriracha', cursive;
+     }
+     .name{
+     font-family: 'Ceviche One', cursive;
+     font-size:35px;
+     color: orangered;
+     }
+     .nav
+     {
+     justify-content: center;
+     align-items: center;
+     }
+          .footer-1 {
+   margin-top: 0px;
+   margin-bottom: 2px;
+   bottom: 2px;
+   width: 100%;
+   height: auto;
+   background-color: rgb(128, 128, 128);
+   color: white;
+   font-style: oblique;
+   font-size: 20px;
+   text-align: center;
+}
+.navbar{
+padding: 5px;
+}
+.bg{
+background-color:black;
+}
+.bg1{
+background-color: #DDDDDD;
+}
+
+  </style>
+      <script type='text/javascript' src='https://platform-api.sharethis.com/js/sharethis.js#property=5ecdc3ace653cf001211cd1b&product=inline-share-buttons&cms=website' async='async'></script>
+  </head>
+  <body class="bg1">
+
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg">
+  <h3 class="name">The Saffron Times</h3>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon" style="color:orangered;"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <div class="container">
+    <ul class="navbar-nav mr-auto" style="align-items:center;">
+      <li class="nav-item {% block homeactive %} {% endblock homeactive %} ">
+        <a class="nav-link word" href="/">Home <span class="sr-only">(current)</span></a>
+      </li>
+        <li class="nav-item active">
+        <div class="dropdown">
+  <button class="btn btn-primary btn-sm dropdown-toggle m-2 word" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Blog
+  </button>
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+      <a class="dropdown-item" href="/blog/">All Blogs</a>
+      <a class="dropdown-item" href="/education">Education</a>
+      <a class="dropdown-item" href="/political">Political</a>
+      <a class="dropdown-item" href="/historical">Travel </a>
+      <a class="dropdown-item" href="/gadgets">Gadgets</a>
+      <a class="dropdown-item" href="/historical">Historical</a>
+      <a class="dropdown-item" href="/automobiles">Automobiles</a>
+      <a class="dropdown-item" href="/beautyfashion">Beauty and Fahion</a>
+      <a class="dropdown-item" href="/sportsfitness">Sports and Fitness</a>
+      <a class="dropdown-item" href="/technology">Science and Technology</a>
+      <a class="dropdown-item" href="/religious">Religious and Culture</a>
+      <a class="dropdown-item" href="/motivational">Motivational and Lifestyle</a>
+  </div>
+</div>
+      </li>
+
+
+
+
+
+
+<a class="nav-link" href="/news/"><button class="btn btn-primary btn-sm word" type="button"   aria-haspopup="true" aria-expanded="false">
+    News
+  </button></a>
+
+
+
+
+
+
+
+      <li class="nav-item {% block aboutactive %} {% endblock aboutactive %}">
+        <a class="nav-link word" href="/about">About Us</a>
+      </li>
+
+       <li class="nav-item {% block contactactive %} {% endblock contactactive %}">
+        <a class="nav-link word" href="/contact">Contact Us</a>
+      </li>
+
+
+
+    </ul>
+      </div>
+      <div class="ml-auto form-inline">
+
+{% if user.is_authenticated %}
+      <ul class="navbar-nav ">
+          <li class="nav-item dropdown ">
+              <a class="nav-link dropdown-toggle active m-2 word" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Welcome {{ request.user}}
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item word" href="/Logout">Logout</a>
+              </div>
+          </li>
+      </ul>
+      {% else %}
+          <!-- Button login modal -->
+          <div class="form-inline">
+<button type="button" class="btn btn-sm btn-primary m-2 word" data-toggle="modal" data-target="#LoginModal">
+  Login
+</button>
+       <!-- Button signup modal -->
+<button type="button" class="btn btn-sm btn-primary m-2 word" data-toggle="modal" data-target="#signupModal">
+  Sign-Up
+</button>
+          </div>
+  {% endif %}
+  </div>
+  </div>
+</nav>
+    {% for message in messages %}
+    <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
+  <strong>Message:</strong> {{ message }}
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+    {% endfor %}
+
+
+
+<!-- signupModal -->
+<div class="modal fade" id="signupModal" tabindex="-1" role="dialog" aria-labelledby="signupModal" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title word" id="signup">Sign Up</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form action="/Signup" method="post">
+            {% csrf_token %}
+            <div class="form-group">
+   <!-- <label for="username">user name</label>-->
+    <input type="text" class="form-control" id="username" name="username" aria-describedby="username" placeholder="username" required>
+  </div>
+
+            <div class="form-group">
+    <!--<label for="fname">first name</label>-->
+    <input type="text" class="form-control" id="fname" name="fname" aria-describedby="firstname" placeholder="First Name" required>
+  </div>
+            <div class="form-group">
+    <!--<label for="lname">last name</label>-->
+    <input type="text" class="form-control" id="lname" name="lname" aria-describedby="lastname" placeholder="Last Name">
+  </div>
+  <div class="form-group">
+   <!-- <label for="Email">Email address</label>-->
+    <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp" placeholder="Enter email" required>
+    <small id="emailHelp" class="form-text text-muted word">We'll never share your email with anyone else.</small>
+  </div>
+  <div class="form-group">
+    <!--<label for="Password">Enter Password</label>-->
+    <input type="password" class="form-control" id="pass1" name="pass1" placeholder="Enter Password" required>
+  </div>
+            <div class="form-group">
+    <!--<label for="Password">Confirm Password</label>-->
+    <input type="password" class="form-control" id="pass2" name="pass2" placeholder="Confirm Password" >
+  </div>
+
+  <button type="submit" class="btn btn-primary word">Submit</button>
+</form>
+      </div>
+      <!--<div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Submit</button>
+      </div>-->
+    </div>
+  </div>
+</div>
+
+
+    <!-- LoginModal -->
+<div class="modal fade" id="LoginModal" tabindex="-1" role="dialog" aria-labelledby="LoginModal" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title word" id="Login">Login</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form action="/Login" method="post">
+             {% csrf_token %}
+            <div class="form-group">
+   <!-- <label for="username">user name</label>-->
+    <input type="text" class="form-control" id="loginusername" name="loginusername" aria-describedby="username" placeholder="username" required>
+  </div>
+
+
+            <div class="form-group">
+    <!--<label for="Password">Confirm Password</label>-->
+    <input type="password" class="form-control" id="loginpassword" name="loginpassword" placeholder="Enter Password" required>
+  </div>
+
+  <button type="submit" class="btn btn-primary word">Submit</button>
+</form>
+      </div>
+
+    </div>
+  </div>
+</div>
+  {% block body %} {% endblock %}
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.js"
+  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+  crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+    {% block js %} {% endblock %}
+
+<div class="footer-1">
+    <div class="sharethis-inline-follow-buttons pb-2"></div>
+</div>
+
+  </body>
+</html>
